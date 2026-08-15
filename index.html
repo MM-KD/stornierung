@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kundenservice – Stornierungen</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #c90000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 650px;
+    text-align: center;
+    padding: 40px 30px;
+}
+
+.logo-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 30px auto;
+    border-radius: 12px;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 23px;
+    margin-bottom: 30px;
+}
+
+p {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.service-box {
+    margin-top: 30px;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 12px;
+}
+
+.service-title {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.support-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 35px;
+    background: #ffffff;
+    color: #c90000;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.support-button:hover {
+    background: #eeeeee;
+}
+
+.footer {
+    margin-top: 30px;
+    color: #ffffff;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- DEIN BILD -->
+    <img src="logo.png" alt="Logo" class="logo-image">
+
+    <h1>Willkommen beim Kundenservice</h1>
+
+    <h2>Bereich: Stornierungen</h2>
+
+    <p>
+        Wenn Sie Unterstützung bei einer Stornierung benötigen,
+        wählen Sie bitte den entsprechenden Service aus.
+    </p>
+
+    <div class="service-box">
+
+        <div class="service-title">
+            Stornierungen
+        </div>
+
+        <p>
+            Bitte klicken Sie unten auf „Stornierungen“,
+            um Unterstützung zu erhalten.
+        </p>
+
+        <a href="#" class="support-button">
+            Stornierungen
+        </a>
+
+    </div>
+
+    <div class="footer">
+        Kundenservice
+    </div>
+
+</div>
+
+
+<!-- Start of LiveAgent integration script: Chat button: Schaltfläche Pin 88 -->
+
+<script type="text/javascript">
+(function(d, src, c) { 
+    var t=d.scripts[d.scripts.length - 1],
+    s=d.createElement('script');
+
+    s.id='la_x2s6df8d';
+    s.defer=true;
+    s.src=src;
+
+    s.onload=s.onreadystatechange=function(){
+        var rs=this.readyState;
+
+        if(rs && (rs!='complete') && (rs!='loaded')){
+            return;
+        }
+
+        c(this);
+    };
+
+    t.parentElement.insertBefore(s,t.nextSibling);
+
+})(document,
+'https://mm-kd.ladesk.com/scripts/track.js',
+function(e){ 
+    LiveAgent.createButton('m1n71sd2', e); 
+});
+</script>
+
+<!-- End of LiveAgent integration script -->
+
+</body>
+</html>
