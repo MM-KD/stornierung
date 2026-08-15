@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kundendienst – Stornierungen</title>
+<title>Kundenservice</title>
 
 <style>
 * {
@@ -14,6 +14,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html, body {
+    width: 100%;
+    min-height: 100%;
+}
+
 body {
     min-height: 100vh;
     background: #c90000;
@@ -21,77 +26,102 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .container {
-    width: 90%;
-    max-width: 650px;
+    width: 100%;
+    max-width: 600px;
     text-align: center;
-    padding: 40px 30px;
+    padding: 25px 18px;
 }
 
 .logo-image {
-    width: 150px;
-    height: 150px;
+    width: min(38vw, 140px);
+    height: min(38vw, 140px);
     object-fit: contain;
     display: block;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 24px;
     border-radius: 12px;
 }
 
 h1 {
     color: #ffffff;
-    font-size: 34px;
-    margin-bottom: 15px;
+    font-size: clamp(25px, 7vw, 36px);
+    line-height: 1.2;
+    margin-bottom: 14px;
 }
 
 h2 {
     color: #ffffff;
-    font-size: 23px;
-    margin-bottom: 30px;
+    font-size: clamp(19px, 5vw, 25px);
+    line-height: 1.3;
+    margin-bottom: 24px;
 }
 
 p {
     color: #ffffff;
-    font-size: 18px;
-    line-height: 1.7;
+    font-size: clamp(16px, 4.5vw, 19px);
+    line-height: 1.6;
 }
 
-.service-box {
-    margin-top: 30px;
-    padding: 25px;
-    background: rgba(0, 0, 0, 0.18);
-    border: 1px solid rgba(255,255,255,0.4);
-    border-radius: 12px;
-}
-
-.service-title {
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.support-button {
-    display: inline-block;
+.info-box {
+    width: 100%;
     margin-top: 25px;
-    padding: 15px 35px;
-    background: #ffffff;
-    color: #c90000;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 17px;
+    padding: 22px 16px;
+    background: rgba(0, 0, 0, 0.20);
+    border: 1px solid rgba(255,255,255,0.45);
+    border-radius: 14px;
 }
 
-.support-button:hover {
-    background: #eeeeee;
+.info-title {
+    color: #ffffff;
+    font-size: clamp(19px, 5vw, 23px);
+    font-weight: bold;
+    margin-bottom: 14px;
 }
 
 .footer {
-    margin-top: 30px;
+    margin-top: 25px;
     color: #ffffff;
     font-size: 13px;
+}
+
+/* Kleine Smartphones */
+@media (max-width: 380px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 20px 10px;
+    }
+
+    .logo-image {
+        margin-bottom: 20px;
+    }
+
+    .info-box {
+        padding: 18px 13px;
+    }
+}
+
+/* Handy im Querformat */
+@media (max-height: 500px) and (orientation: landscape) {
+    body {
+        align-items: flex-start;
+        padding-top: 15px;
+    }
+
+    .container {
+        padding-top: 10px;
+    }
+
+    .logo-image {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 12px;
+    }
 }
 </style>
 </head>
@@ -100,20 +130,27 @@ p {
 
 <div class="container">
 
-    <!-- DEIN BILD -->
+    <!-- Bilddatei im GitHub-Repository -->
     <img src="logo.png" alt="Logo" class="logo-image">
 
-    <h1>Willkommen beim Kundendienst</h1>
+    <h1>
+        Willkommen beim Kundenservice
+    </h1>
 
-    <h2>Bereich: Stornierungen</h2>
+    <h2>
+        Bereich: Stornierungen
+    </h2>
 
-    <p>
-        Wenn Sie Unterstützung bei einer Stornierung benötigen,
-        wählen Sie bitte den entsprechenden Service aus.
-    </p>
-    
-           
-        </a>
+    <div class="info-box">
+
+        <div class="info-title">
+            Kundenservice
+        </div>
+
+        <p>
+            Bitte nutzen Sie den Live-Support,
+            um mit einem Mitarbeiter verbunden zu werden.
+        </p>
 
     </div>
 
@@ -123,38 +160,35 @@ p {
 
 </div>
 
-
-<!-- Start of LiveAgent integration script: Chat button: Schaltfläche Pin 88 -->
+<!-- LiveAgent -->
 
 <script type="text/javascript">
-(function(d, src, c) { 
-    var t=d.scripts[d.scripts.length - 1],
-    s=d.createElement('script');
+(function(d, src, c) {
+    var t = d.scripts[d.scripts.length - 1],
+        s = d.createElement('script');
 
-    s.id='la_x2s6df8d';
-    s.defer=true;
-    s.src=src;
+    s.id = 'la_x2s6df8d';
+    s.defer = true;
+    s.src = src;
 
-    s.onload=s.onreadystatechange=function(){
-        var rs=this.readyState;
+    s.onload = s.onreadystatechange = function() {
+        var rs = this.readyState;
 
-        if(rs && (rs!='complete') && (rs!='loaded')){
+        if (rs && rs != 'complete' && rs != 'loaded') {
             return;
         }
 
         c(this);
     };
 
-    t.parentElement.insertBefore(s,t.nextSibling);
+    t.parentElement.insertBefore(s, t.nextSibling);
 
 })(document,
 'https://mm-kd.ladesk.com/scripts/track.js',
-function(e){ 
-    LiveAgent.createButton('m1n71sd2', e); 
+function(e) {
+    LiveAgent.createButton('m1n71sd2', e);
 });
 </script>
-
-<!-- End of LiveAgent integration script -->
 
 </body>
 </html>
